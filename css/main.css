@@ -62,9 +62,19 @@ button {
   cursor: pointer;
 }
 .container {
-  max-width: 1400px;
+  width: 290px;
   margin: 0 auto;
   padding: 0px;
+}
+@media (min-width: 708px) {
+  .container {
+    width: 708px;
+  }
+}
+@media (min-width: 1140px) {
+  .container {
+    width: 1140px;
+  }
 }
 .title-one-level {
   font-size: 42px;
@@ -72,6 +82,11 @@ button {
   color: #000000;
   line-height: 1.2;
   font-weight: 400;
+}
+@media (min-width: 708px) {
+  .title-one-level {
+    font-size: 42px;
+  }
 }
 .line-horizontal {
   position: relative;
@@ -97,16 +112,49 @@ button {
   font-weight: 400;
   margin-bottom: 25px;
 }
+@media (min-width: 708px) {
+  .title-two-level {
+    font-size: 32px;
+  }
+}
 .icon-contacts-item {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
+  border-radius: 50%;
+  font-size: 35px;
+  margin-right: 25px;
+  margin-bottom: 20px;
 }
-.fab {
-  margin: 0 auto;
-  border-radius: 60px;
-  vertical-align: middle;
+.icon-contacts-item:last-child {
+  margin-right: 0;
+}
+.list-function-item {
+  margin-bottom: 20px;
+}
+.vk {
+  width: 45px;
+  height: 45px;
   font-size: 25px;
+  background-color: #4e77a1;
+  color: #ffffff;
+}
+.vk:visited {
+  color: #ffffff;
+}
+.telegram {
+  color: #069ce5;
+}
+.telegram:visited {
+  color: #069ce5;
+}
+.facebook {
+  color: #3b5998;
+}
+.facebook:visited {
+  color: #3b5998;
 }
 .header {
   padding-top: 35px;
@@ -121,7 +169,7 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-@media (min-width: 1430px) {
+@media (min-width: 1140px) {
   .header-nav {
     padding-left: 0px;
     padding-right: 0px;
@@ -140,7 +188,15 @@ button {
   max-width: 400px;
   padding-top: 100px;
   transition: 0.5s;
-  transform: translateX(100%);
+}
+@media (min-width: 1140px) {
+  .header-menu {
+    transform: translateX(0);
+    display: inline-flex;
+    position: relative;
+    flex-direction: row;
+    padding: 0;
+  }
 }
 .header-menu.active {
   transition: 0.5s;
@@ -153,6 +209,15 @@ button {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 10px;
+  margin-right: 80px;
+}
+.header-menu-item:last-child {
+  margin-right: 0;
+}
+@media (min-width: 1140px) {
+  .header-menu-item {
+    margin-bottom: 0;
+  }
 }
 .toggle-menu {
   cursor: pointer;
@@ -164,7 +229,7 @@ button {
   z-index: 15;
   margin-right: 20px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1140px) {
   .toggle-menu {
     display: none;
   }
@@ -242,33 +307,84 @@ button {
   }
 }
 .about {
-  padding: 35px 15px 0 15px;
+  padding-top: 35px;
+}
+@media (min-width: 708px) {
+  .about {
+    padding-top: 75px;
+  }
+}
+.wrapper-text {
+  width: 50%;
+  margin-right: 30px;
 }
 .wrapper-about {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 708px) {
+  .wrapper-about {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+.text {
+  font-size: 18px;
+  font-family: "Mplus 1p Medium";
+  color: #393f47;
+  line-height: 1.667;
+  text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
 }
 .img-wrapper {
-  max-width: 290px;
+  width: 50%;
   max-height: 290px;
   margin-bottom: 55px;
 }
+@media (min-width: 708px) {
+  .img-wrapper {
+    margin-bottom: 0;
+  }
+}
 .img-wrapper img {
-  vertical-align: top;
+  margin: 0 auto;
 }
 .wrapper-title-one-header {
   margin-bottom: 35px;
 }
-.function {
-  padding: 0 15px 0 15px;
-}
 .function-text-wrapper {
+  width: 50%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin-bottom: 45px;
 }
+@media (min-width: 708px) {
+  .function-text-wrapper {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+}
 .contacts {
-  padding: 0 15px 0 15px;
+  width: 50%;
+}
+.function-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 708px) {
+  .function-wrapper {
+    flex-direction: row;
+    justify-content: start;
+  }
+}
+.mail {
+  font-size: 20px;
+  font-family: "Mplus 1p";
+  color: #000000;
+  text-decoration: underline;
+  line-height: 1.2;
+  text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
+  font-weight: 400;
 }
 /*# sourceMappingURL=main.css.map */
