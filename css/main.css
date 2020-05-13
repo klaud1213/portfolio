@@ -35,7 +35,7 @@ a:visited {
   left: 0;
   right: 0;
   background-color: rgba(201, 61, 61, 0.4);
-  z-index: 5;
+  z-index: 1;
   display: none;
 }
 #overlay.active {
@@ -87,6 +87,26 @@ button {
   height: 12px;
   background-color: #fbdc4d;
   z-index: -1;
+}
+.title-two-level {
+  font-size: 30px;
+  font-family: "Mplus 1p ExtraBold";
+  color: #000000;
+  line-height: 1.2;
+  text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.icon-contacts-item {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+.fab {
+  margin: 0 auto;
+  border-radius: 60px;
+  vertical-align: middle;
+  font-size: 25px;
 }
 .header {
   padding-top: 35px;
@@ -221,13 +241,12 @@ button {
     transform: rotateY(360deg);
   }
 }
-.about-me {
+.about {
   padding: 35px 15px 0 15px;
 }
-.wrapper-about-me {
+.wrapper-about {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .img-wrapper {
   max-width: 290px;
@@ -239,5 +258,17 @@ button {
 }
 .wrapper-title-one-header {
   margin-bottom: 35px;
+}
+.function {
+  padding: 0 15px 0 15px;
+}
+.function-text-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 45px;
+}
+.contacts {
+  padding: 0 15px 0 15px;
 }
 /*# sourceMappingURL=main.css.map */
