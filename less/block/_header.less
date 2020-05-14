@@ -1,6 +1,13 @@
 .header {
   padding-top: 35px;
   padding-bottom: 100px;
+  background-image: url(../img/header/headerBg.jpg);
+  background-size: contain;
+  background-position: 0 0;
+  background-repeat: repeat;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .header-nav {
   max-width: 1400px;
@@ -29,13 +36,14 @@
   max-width: 400px;
   padding-top: 100px;
   transition: 0.5s;
+  transform: translateX(100%);
 
   @media (min-width: 1140px) {
-    transform: translateX(0);
     display: inline-flex;
     position: relative;
     flex-direction: row;
     padding: 0;
+    transform: translateX(0);
   }
 }
 
@@ -51,16 +59,40 @@
   line-height: 1.2;
   margin-bottom: 10px;
   margin-right: 80px;
+  position: relative;
   &:last-child {
     margin-right: 0;
   }
   @media (min-width: 1140px) {
     margin-bottom: 0;
   }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: yellow;
+    transition: 0.5s;
+    z-index: -1;
+  }
+  &:hover::after {
+    width: 100%;
+  }
 }
 .header-social-icons {
+  display: none;
+  @media (min-width: 1140px) {
+    display: block;
+    font-size: 25px;
+  }
 }
 .header-social-icons-item {
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 .toggle-menu {
   cursor: pointer;
@@ -155,6 +187,7 @@
 
 .about {
   padding-top: 35px;
+  z-index: 20;
   @media (min-width: 708px) {
     padding-top: 75px;
   }
@@ -162,13 +195,16 @@
   }
 }
 .wrapper-text {
-  width: 50%;
+  width: auto;
+  @media (min-width: 708px) {
+    width: 50%;
+  }
   margin-right: 30px;
 }
 .wrapper-about {
   display: flex;
   flex-direction: column;
-  align-items: center;
+
   @media (min-width: 708px) {
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -183,20 +219,48 @@
   color: rgb(57, 63, 71);
   line-height: 1.667;
   text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
+  margin-bottom: 40px;
+  @media (min-width: 1140px) {
+    max-width: 488px;
+  }
+}
+.wrapper-img-bg {
+  transform: scale(1.8);
+  margin-top: -40px;
+  position: relative;
+  margin-bottom: 90px;
+  z-index: 1;
+  @media (min-width: 708px) {
+    margin-bottom: 30px;
+    transform: scale(1);
+    &::after {
+      position: absolute;
+      background-color: black;
+      height: 20px;
+      top: 0;
+    }
+  }
+  @media (min-width: 708px) {
+  }
 }
 .img-wrapper {
-  width: 50%;
-
+  width: auto;
   max-height: 290px;
   margin-bottom: 55px;
   @media (min-width: 708px) {
     margin-bottom: 0;
+    width: 50%;
   }
   @media (min-width: 1140px) {
+    display: flex;
+    justify-content: flex-end;
   }
 }
 .img-wrapper img {
   margin: 0 auto;
+  @media (min-width: 1140px) {
+    margin: 0;
+  }
 }
 
 .wrapper-title-one-header {
@@ -204,7 +268,7 @@
 }
 
 .function-text-wrapper {
-  width: 50%;
+  width: auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -212,12 +276,19 @@
   @media (min-width: 708px) {
     margin-bottom: 0;
     margin-right: 30px;
+    width: 50%;
   }
   @media (min-width: 1140px) {
   }
 }
 .contacts {
-  width: 50%;
+  width: auto;
+  @media (min-width: 708px) {
+    width: 50%;
+  }
+  @media (min-width: 1140px) {
+    width: 30%;
+  }
 }
 .function-wrapper {
   display: flex;
@@ -227,6 +298,7 @@
     justify-content: start;
   }
   @media (min-width: 1140px) {
+    justify-content: space-between;
   }
 }
 .mail {
@@ -237,4 +309,47 @@
   line-height: 1.2;
   text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
   font-weight: 400;
+}
+.button-contacts {
+  display: none;
+  border-radius: 30px;
+  border-width: 4px;
+  border-color: rgb(70, 70, 70);
+  border-style: solid;
+
+  font-size: 22px;
+  font-family: "Mplus 1p Bold";
+  color: rgb(70, 70, 70);
+  font-weight: bold;
+  line-height: 1.2;
+  width: 182px;
+  height: 64px;
+  @media (min-width: 1140px) {
+    display: inline-block;
+  }
+}
+
+.list-function {
+  @media (min-width: 1140px) {
+    margin-bottom: 20px;
+  }
+}
+.list-function-item {
+  @media (min-width: 1140px) {
+    font-size: 24px;
+    position: relative;
+    font-family: "Mplus 1p";
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: -25px;
+      height: 1px;
+      width: 10px;
+      background-color: black;
+    }
+  }
 }
