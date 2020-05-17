@@ -11,7 +11,8 @@ body {
   width: 100%;
   height: 100%;
   color: #393f47;
-  font-family: "M PLUS 1p", sans-serif;
+  font-family: "M PLUS 1p";
+  font-weight: 300;
   font-size: 18px;
   line-height: 1.5;
   position: relative;
@@ -20,13 +21,15 @@ a,
 a:hover {
   text-decoration: none;
 }
+
 ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
-a:link a:visited {
+a:link,
+a:visited {
   color: #000;
 }
 
@@ -78,10 +81,10 @@ button {
 }
 .title-one-level {
   font-size: 42px;
-  font-family: "Mplus 1p ExtraBold";
+
   color: rgb(0, 0, 0);
   line-height: 1.2;
-  font-weight: 400;
+  font-weight: 800;
   @media (min-width: 708px) {
     font-size: 42px;
   }
@@ -113,11 +116,11 @@ button {
 }
 .title-two-level {
   font-size: 30px;
-  font-family: "Mplus 1p ExtraBold";
+
   color: rgb(0, 0, 0);
   line-height: 1.2;
   text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
-  font-weight: 400;
+  font-weight: 800;
   margin-bottom: 25px;
   @media (min-width: 708px) {
     font-size: 32px;
@@ -145,41 +148,22 @@ button {
   margin-bottom: 20px;
 }
 
-.vk {
-  width: 45px;
-  height: 45px;
-  font-size: 25px;
-  background-color: #4e77a1;
-  color: #ffffff;
-  &:visited {
-    color: #ffffff;
-  }
-}
-.telegram {
-  color: #069ce5;
-  &:visited {
-    color: #069ce5;
-  }
-}
-.facebook {
-  color: #3b5998;
-  &:visited {
-    color: #3b5998;
-  }
-}
 .button-standart {
+  position: relative;
   display: none;
   border-radius: 30px;
   background-color: rgb(251, 220, 77);
   margin-right: 20px;
   font-size: 22px;
-  font-family: "Mplus 1p Bold";
+  cursor: pointer;
   color: rgb(0, 0, 0);
-  font-weight: bold;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 64px;
   border: none;
   width: 255px;
   height: 64px;
+  text-align: center;
+  z-index: 10;
   @media (min-width: 1140px) {
     display: inline-block;
   }
