@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+.none {
+  display: none;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -20,6 +23,7 @@ body {
 a,
 a:hover {
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul {
@@ -40,7 +44,7 @@ a:visited {
   left: 0;
   right: 0;
   background-color: rgba(201, 61, 61, 0.4);
-  z-index: 1;
+  z-index: 20;
   display: none;
 }
 #overlay.active {

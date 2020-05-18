@@ -14,7 +14,7 @@
     <title>Портфолио Чепурной Владимир</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header none">
       <!--         Начало  Навигация Шапка                        -->
       <div id="overlay"></div>
       <div class="header-nav">
@@ -115,11 +115,81 @@
         </div>
       </div>
     </header>
+    <main>
+      <section class="portfolio">
+        <div class="container">
+          <h1 class="title-one-level-portfolio">
+            <span class="line-horizontal-portfolio">Портфолио</span>
+          </h1>
+          <div class="list-portfolio">
+            <button
+              class="list-portfolio-item control-active"
+              data-filter="all"
+            >
+              Все работы
+            </button>
+            <button class="list-portfolio-item" data-filter=".boots">
+              Bootstrap
+            </button>
+            <button class="list-portfolio-item" data-filter=".wp">
+              WordPress
+            </button>
+            <button class="list-portfolio-item" data-filter=".frontend">
+              Frontend
+            </button>
+          </div>
+          <div class="row-portfolio" id="portfolio-project">
+            <div class="block-portfolio block-portfolio-big mix boots">
+              <a class="img-block">
+                <img src="./img/portfolio/img-1.jpg" alt="" />
+                <button class="more-btn">Смотреть проект</button>
+              </a>
+              <a class="title-block"> Верстка “Форест тревел”</a>
+              <p class="text-block">Верстка многостраничного сайта.</p>
+            </div>
+            <div class="block-portfolio block-portfolio-big mix boots">
+              <a class="img-block">
+                <img src="./img/portfolio/img-1.jpg" alt="" />
+                <button class="more-btn">Смотреть проект</button>
+              </a>
+              <a class="title-block">Сайт для коворкинга “Мечта”</a>
+              <p class="text-block">Верстка лендинга.</p>
+            </div>
+
+            <div class="block-portfolio block-portfolio-small mix wp boots">
+              <a class="img-block">
+                <img src="./img/portfolio/img-1.jpg" alt="" />
+                <button class="more-btn">Смотреть проект</button>
+              </a>
+              <a class="title-block">Верстка “Форест тревел”</a>
+              <p class="text-block">Верстка многостраничного сайта.</p>
+            </div>
+            <div class="block-portfolio block-portfolio-small mix wp">
+              <a class="img-block">
+                <img src="./img/portfolio/img-1.jpg" alt="" />
+                <button class="more-btn">Смотреть проект</button>
+              </a>
+              <a class="title-block">Верстка “Форест тревел”</a>
+              <p class="text-block">Верстка многостраничного сайта.</p>
+            </div>
+            <div class="block-portfolio block-portfolio-small mix wp frontend">
+              <a class="img-block">
+                <img src="./img/portfolio/img-1.jpg" alt="" />
+                <button class="more-btn">Смотреть проект</button>
+              </a>
+              <a class="title-block">Верстка “Форест тревел”</a>
+              <p class="text-block">Верстка многостраничного сайта.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script
       src="https://kit.fontawesome.com/bef3e7a310.js"
       crossorigin="anonymous"
     ></script>
     <script src="./libs/jquery/jquery-3.5.0.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./libs/Mixitup/mixitup.min.js"></script>
   </body>
 </html>

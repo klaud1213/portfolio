@@ -1,0 +1,159 @@
+.portfolio {
+  padding-top: 110px;
+  padding-bottom: 120px;
+}
+.title-one-level-portfolio {
+  font-size: 64px;
+  font-family: "Mplus 1p";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  font-weight: 800;
+
+  z-index: 38;
+}
+
+.line-horizontal-portfolio {
+  position: relative;
+  font-size: 42px;
+  z-index: 2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: -5px;
+    right: -5px;
+    height: 12px;
+    background-color: #fbdc4d;
+    z-index: -1;
+  }
+  @media (min-width: 708px) {
+    font-size: 42px;
+  }
+  @media (min-width: 1140px) {
+    font-size: 64px;
+    &::after {
+      bottom: 10px;
+      left: -5px;
+      right: -5px;
+      height: 12px;
+    }
+  }
+}
+.list-portfolio {
+  margin-top: 65px;
+
+  margin-bottom: 50px;
+}
+.list-portfolio-item {
+  font-size: 28px;
+  font-family: "Mplus 1p ";
+  font-weight: 800;
+  color: rgb(143, 165, 174);
+  line-height: 1.2;
+  border: none;
+  background-color: white;
+  margin-right: 80px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.control-active {
+  color: rgb(0, 0, 0);
+}
+.row-portfolio {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.block-portfolio {
+  max-width: 555px;
+  margin-bottom: 60px;
+}
+.block-portfolio-big {
+  width: 555px;
+}
+.block-portfolio-small {
+  width: 360px;
+}
+.title-block {
+  display: block;
+  position: relative;
+  font-size: 32px;
+  font-family: "Mplus 1p";
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  transition: 0.5s;
+  &:hover {
+    text-decoration: underline;
+    transition: 0.5s;
+    color: #ed574f;
+  }
+}
+
+.img-block {
+  margin-bottom: 30px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: 0.5s;
+    background-color: rgba(244, 220, 98, 0.85);
+  }
+  &:hover::before {
+    transform: translateY(0%);
+    transition: 0.5s;
+  }
+  &:hover .more-btn {
+    opacity: 1;
+  }
+}
+.text-block {
+  font-size: 22px;
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+}
+.more-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 25;
+  border-width: 3px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  font-size: 22px;
+  font-weight: 800;
+  color: rgb(234, 115, 109);
+  line-height: 1.2;
+  width: 248px;
+  height: 46px;
+  transition: 0.5s;
+  opacity: 0;
+  &:hover {
+    transition: 0.5s;
+    background-color: rgb(234, 115, 109);
+    color: white;
+    border-color: rgb(234, 115, 109);
+  }
+  &:active {
+    background-color: #d4423b;
+    transition: 0.5s;
+    color: white;
+    border-color: #d4423b;
+  }
+}
