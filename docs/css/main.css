@@ -729,17 +729,36 @@ button {
 }
 .block-work {
   display: flex;
-  width: 555px;
   padding-bottom: 30px;
-  align-content: flex-start;
 }
 .block-work:nth-child(even) {
   margin-left: auto;
   justify-content: start;
+  position: relative;
+}
+.block-work:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 32px;
+  background-color: red;
+  width: 5px;
 }
 .block-work:nth-child(odd) {
   flex-direction: row-reverse;
   justify-content: flex-start;
+  margin-right: auto;
+  position: relative;
+}
+.block-work:nth-child(odd)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 32px;
+  background-color: red;
+  width: 5px;
 }
 .icon {
   width: 74px;
@@ -748,16 +767,5 @@ button {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  position: relative;
-}
-.icon::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 64px;
-  background-color: red;
-  width: 5px;
-  min-height: 200px;
 }
 /*# sourceMappingURL=main.css.map */
