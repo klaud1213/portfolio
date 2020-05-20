@@ -713,6 +713,7 @@ button {
 }
 .work {
   padding-top: 150px;
+  padding-bottom: 150px;
 }
 .title-work {
   font-size: 64px;
@@ -720,7 +721,7 @@ button {
   color: #000000;
   line-height: 1.2;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 150px;
 }
 .wrapper-block-work {
   display: flex;
@@ -729,9 +730,23 @@ button {
 }
 .block-work {
   display: flex;
+  width: 50%;
   padding-bottom: 30px;
+  position: relative;
+  margin-bottom: 25px;
+  min-height: 200px;
+}
+.block-work:first-child::after {
+  content: "";
+  position: absolute;
+  top: -90px;
+  bottom: 250px;
+  right: -2px;
+  background-color: #e1eef4;
+  width: 5px;
 }
 .block-work:nth-child(even) {
+  padding-right: 68px;
   margin-left: auto;
   justify-content: start;
   position: relative;
@@ -739,33 +754,129 @@ button {
 .block-work:nth-child(even)::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 32px;
-  background-color: red;
+  top: 60px;
+  bottom: 20px;
+  right: auto;
+  left: -2px;
+  background-color: #e1eef4;
   width: 5px;
+}
+.block-work:nth-child(even) .icon {
+  right: 37px;
+}
+.block-work:nth-child(even) .title-three-work {
+  text-align: left;
+}
+.block-work:nth-child(even) .text-work {
+  text-align: left;
+}
+.block-work:nth-child(even) .time-work {
+  text-align: left;
 }
 .block-work:nth-child(odd) {
   flex-direction: row-reverse;
   justify-content: flex-start;
   margin-right: auto;
   position: relative;
+  padding-left: 68px;
 }
 .block-work:nth-child(odd)::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 32px;
-  background-color: red;
+  top: 60px;
+  bottom: 20px;
+  left: auto;
+  right: -2px;
+  background-color: #e1eef4;
   width: 5px;
 }
+.block-work:nth-child(odd) .icon {
+  left: 37px;
+}
+.block-work:last-child::before {
+  content: "";
+  background-color: white;
+}
 .icon {
+  position: relative;
   width: 74px;
   height: 74px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  padding: 16px;
+  border-radius: 28px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 35px 0px rgba(0, 112, 187, 0.35);
+  top: -30px;
+}
+.title-three-work {
+  font-size: 26px;
+  font-family: "Mplus 1p";
+  font-weight: 800;
+  color: #000000;
+  line-height: 1.2;
+  text-align: right;
+  margin-bottom: 15px;
+}
+.text-work {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1.2;
+  text-align: right;
+  margin-bottom: 20px;
+}
+.time-work {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: right;
+}
+.contact {
+  padding-top: 150px;
+  background-color: #f4f8f9;
+}
+.title-contact {
+  font-size: 64px;
+  text-align: center;
+  font-weight: 800;
+  color: #000000;
+  line-height: 1.2;
+  margin-bottom: 70px;
+}
+.wrapper-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper-contact-text {
+  max-width: 555px;
+}
+.text-contact {
+  font-size: 20px;
+  font-family: "Mplus 1p";
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.wrapper-contact-list {
+  margin-bottom: 50px;
+  display: flex;
+}
+.contact-paragraf-wrapper {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-right: 60px;
+}
+.contact-paragraf-wrapper p {
+  margin-bottom: 35px;
 }
 /*# sourceMappingURL=main.css.map */

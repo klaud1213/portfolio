@@ -1,5 +1,6 @@
 .work {
   padding-top: 150px;
+  padding-bottom: 150px;
 }
 .title-work {
   font-size: 64px;
@@ -7,7 +8,7 @@
   color: rgb(0, 0, 0);
   line-height: 1.2;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 150px;
 }
 .wrapper-block-work {
   display: flex;
@@ -16,45 +17,115 @@
 }
 .block-work {
   display: flex;
+  width: 50%;
 
   padding-bottom: 30px;
+  position: relative;
+  margin-bottom: 25px;
+  min-height: 200px;
+  &:first-child::after {
+    content: "";
+    position: absolute;
+    top: -90px;
+    bottom: 250px;
+    right: -2px;
 
+    background-color: #e1eef4;
+    width: 5px;
+  }
   &:nth-child(even) {
+    padding-right: 68px;
     margin-left: auto;
     justify-content: start;
     position: relative;
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 32px;
-      background-color: red;
+      top: 60px;
+      bottom: 20px;
+      right: auto;
+      left: -2px;
+      background-color: #e1eef4;
       width: 5px;
     }
+    & .icon {
+      right: 37px;
+    }
+    & .title-three-work {
+      text-align: left;
+    }
+    & .text-work {
+      text-align: left;
+    }
+    & .time-work {
+      text-align: left;
+    }
   }
+
   &:nth-child(odd) {
     flex-direction: row-reverse;
     justify-content: flex-start;
     margin-right: auto;
     position: relative;
+    padding-left: 68px;
     &::before {
       content: "";
       position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 32px;
-      background-color: red;
+      top: 60px;
+      bottom: 20px;
+      left: auto;
+
+      right: -2px;
+      background-color: #e1eef4;
       width: 5px;
     }
+    & .icon {
+      left: 37px;
+    }
+  }
+  &:last-child::before {
+    content: "";
+    background-color: white;
   }
 }
 
 .icon {
+  position: relative;
   width: 74px;
   height: 74px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  padding: 16px;
+  border-radius: 28px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 3px 35px 0px rgba(0, 112, 187, 0.35);
+  top: -30px;
+}
+.title-three-work {
+  font-size: 26px;
+  font-family: "Mplus 1p";
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  text-align: right;
+  margin-bottom: 15px;
+}
+.text-work {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  text-align: right;
+  margin-bottom: 20px;
+}
+.time-work {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  line-height: 1.2;
+
+  text-align: right;
 }
