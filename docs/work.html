@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="./fonts/Mplus1p/mplus1p.css" rel="stylesheet" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Портфолио Чепурной Владимир</title>
+  </head>
+  <body class="bg-contact">
+    <header>
+      <!--         Начало  Навигация Шапка                        -->
+      <div id="overlay"></div>
+      <div class="header-nav">
+        <div class="logo"><a href="./index.html">ВЧ</a></div>
+        <nav class="header-menu">
+          <a href="index.html" class="header-menu-item">Главная</a>
+          <a href="work.html" class="header-menu-item">Работы</a>
+          <a href="contact.html" class="header-menu-item">Контакты</a>
+        </nav>
+        <nav class="header-social-icons">
+          <a href="#" class="header-social-icons-item">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="header-social-icons-item">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="header-social-icons-item">
+            <i class="fab fa-vk"></i>
+          </a>
+        </nav>
+        <div class="toggle-menu">
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="portfolio">
+      <div class="container">
+        <h1 class="title-one-level-work">
+          <span class="line-horizontal-portfolio">Портфолио</span>
+        </h1>
+        <div class="list-portfolio">
+          <button class="list-portfolio-item control-active" data-filter="all">
+            Все работы
+          </button>
+          <button class="list-portfolio-item" data-filter=".boots">
+            Bootstrap
+          </button>
+          <button class="list-portfolio-item" data-filter=".wp">
+            WordPress
+          </button>
+          <button class="list-portfolio-item" data-filter=".frontend">
+            Frontend
+          </button>
+        </div>
+        <div class="row-portfolio" id="portfolio-project">
+          <div class="block-portfolio block-portfolio-big mix boots">
+            <a class="img-block">
+              <img src="./img/portfolio/img-1.jpg" alt="" />
+              <button class="more-btn">Смотреть проект</button>
+            </a>
+            <a class="title-block"> Верстка “Форест тревел”</a>
+            <p class="text-block">Верстка многостраничного сайта.</p>
+          </div>
+          <div class="block-portfolio block-portfolio-big mix boots">
+            <a class="img-block">
+              <img src="./img/portfolio/img-1.jpg" alt="" />
+              <button class="more-btn">Смотреть проект</button>
+            </a>
+            <a class="title-block">Сайт для коворкинга “Мечта”</a>
+            <p class="text-block">Верстка лендинга.</p>
+          </div>
+
+          <div class="block-portfolio block-portfolio-small mix wp boots">
+            <a class="img-block">
+              <img src="./img/portfolio/img-1.jpg" alt="" />
+              <button class="more-btn">Смотреть проект</button>
+            </a>
+            <a class="title-block">Верстка “Форест тревел”</a>
+            <p class="text-block">Верстка многостраничного сайта.</p>
+          </div>
+          <div class="block-portfolio block-portfolio-small mix wp">
+            <a class="img-block">
+              <img src="./img/portfolio/img-1.jpg" alt="" />
+              <button class="more-btn">Смотреть проект</button>
+            </a>
+            <a class="title-block">Верстка “Форест тревел”</a>
+            <p class="text-block">Верстка многостраничного сайта.</p>
+          </div>
+          <div class="block-portfolio block-portfolio-small mix wp frontend">
+            <a class="img-block">
+              <img src="./img/portfolio/img-1.jpg" alt="" />
+              <button class="more-btn">Смотреть проект</button>
+            </a>
+            <a class="title-block">Верстка “Форест тревел”</a>
+            <p class="text-block">Верстка многостраничного сайта.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-work">
+      <div class="container">
+        <h3 class="footer-work-title">
+          За созданием сайта:
+        </h3>
+        <p class="footer-work-text">
+          обращайтесь на
+          <a href="" class="footer-work-link">watch_dogs1213@mail.ru</a>
+        </p>
+        <div class="wrapper-icon-footer-work">
+          <div class="icon-contacts">
+            <a href="" class="icon-contacts-item">
+              <img src="./img/header/icons/github.svg" alt="github" /> </a
+            ><a href="" class="icon-contacts-item telegram">
+              <img src="./img/header/icons/telegram.svg" alt="" /></a
+            ><a href="" class="icon-contacts-item vk">
+              <img src="./img/header/icons/vk.svg" alt="" /></a
+            ><a href="" class="icon-contacts-item facebook">
+              <img src="./img/header/icons/facebook.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="img-wrapper-footer-icon">
+          <img src="./img/portfolio/bg-portfolio.png" alt="" />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
