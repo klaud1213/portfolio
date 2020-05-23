@@ -25,13 +25,13 @@
           <a href="contact.html" class="header-menu-item">Контакты</a>
         </nav>
         <nav class="header-social-icons">
-          <a href="#" class="header-social-icons-item">
+          <a href="#" class="header-social-icons-item linkedin-in">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="#" class="header-social-icons-item">
+          <a href="#" class="header-social-icons-item github">
             <i class="fab fa-github"></i>
           </a>
-          <a href="#" class="header-social-icons-item">
+          <a href="#" class="header-social-icons-item vk">
             <i class="fab fa-vk"></i>
           </a>
         </nav>
@@ -62,8 +62,8 @@
                 </p>
               </div>
               <div class="wrapper-button">
-                <a class="button-standart">Познакомиться</a>
-                <a class="button-contacts">Контакты</a>
+                <a class="button-standart" href="#skills">Познакомиться</a>
+                <a class="button-contacts" href="#contact">Контакты</a>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@
       <div class="wrapper-img-bg">
         <img src="./img/header/BG-header.png" alt="фон" />
       </div>
-      <div class="function">
+      <div class="function" id="skills">
         <div class="container">
           <div class="function-wrapper">
             <div class="function-text-wrapper">
@@ -266,7 +266,7 @@
           </div>
         </div>
       </section>
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="container">
           <h2 class="title-contact">
             <span class="line-horizontal-portfolio">Контакты</span>
@@ -290,10 +290,7 @@
                     <a>watch_dogs1213@mail.ru</a>
                   </span>
                 </li>
-                <li class="wrapper-contact-list-item">
-                  <span class="contact-list-col-one">Skype </span>
-                  <span class="contact-list-col-two"><a></a> </span>
-                </li>
+
                 <li class="wrapper-contact-list-item">
                   <span class="contact-list-col-one">Телефон</span>
                   <span class="contact-list-col-two">
@@ -321,8 +318,8 @@
               </div>
             </div>
             <form class="form-contact">
-              <p class="form-text">Ваш Email</p>
-              <input type="text" class="form-input" />
+              <label class="placeholder-email">Ваш Email</label>
+              <input type="text" class="form-input" placeholder="Ваш Email" />
               <input type="text" class="form-input" placeholder="Тема письма" />
               <textarea
                 class="form-textarea"

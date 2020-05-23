@@ -55,6 +55,16 @@ p {
   padding: 0;
   margin: 0;
 }
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection {
+  background-color: #fbdc4d;
+}
+ul li::selection {
+  background-color: #fbdc4d;
+}
 img {
   max-width: 100%;
   display: block;
@@ -106,7 +116,7 @@ button {
 .line-horizontal::after {
   content: "";
   position: absolute;
-  bottom: 5px;
+  bottom: 20px;
   left: -5px;
   right: -5px;
   height: 12px;
@@ -125,6 +135,7 @@ button {
 }
 .title-two-level {
   font-size: 30px;
+  font-weight: 400;
   color: #000000;
   line-height: 1.2;
   text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
@@ -138,7 +149,8 @@ button {
 }
 @media (min-width: 1140px) {
   .title-two-level {
-    font-size: 24px;
+    font-size: 40px;
+    margin-bottom: 35px;
   }
 }
 .icon-contacts-item {
@@ -149,21 +161,18 @@ button {
   height: 50px;
   border-radius: 50%;
   font-size: 35px;
-  margin-right: 25px;
-  margin-bottom: 20px;
+  margin-right: 31px;
+  margin-bottom: 34px;
 }
 .icon-contacts-item:last-child {
   margin-right: 0;
-}
-.list-function-item {
-  margin-bottom: 20px;
 }
 .button-standart {
   position: relative;
   display: none;
   border-radius: 30px;
   background-color: #fbdc4d;
-  margin-right: 20px;
+  margin-right: 14px;
   font-size: 22px;
   cursor: pointer;
   color: #000000;
@@ -179,6 +188,12 @@ button {
   .button-standart {
     display: inline-block;
   }
+}
+.button-standart:hover {
+  background-color: #ffd200;
+}
+.button-standart:active {
+  background-color: #e1bc10;
 }
 .header-contact {
   padding-top: 35px;
@@ -247,7 +262,6 @@ button {
 }
 .header-menu-item {
   font-size: 20px;
-  font-family: "Mplus 1p Bold";
   color: #000000;
   font-weight: 700;
   line-height: 1.2;
@@ -277,20 +291,42 @@ button {
 .header-menu-item:hover::after {
   width: 100%;
 }
+.header-menu-item:focus {
+  outline: none;
+  border: 2px dotted #ea736d;
+}
 .header-social-icons {
   display: none;
 }
 @media (min-width: 1140px) {
   .header-social-icons {
     display: block;
-    font-size: 25px;
+    font-size: 30px;
   }
 }
 .header-social-icons-item {
-  margin-right: 20px;
+  margin-right: 13px;
 }
 .header-social-icons-item:last-child {
   margin-right: 0;
+}
+.vk:hover {
+  color: #45668e;
+}
+.vk:active {
+  color: #45668e;
+}
+.linkedin-in:hover {
+  color: #0077b5;
+}
+.linkedin-in:active {
+  color: #0077b5;
+}
+.github:hover {
+  color: #6cc644;
+}
+.github:active {
+  color: #6cc644;
 }
 .toggle-menu {
   cursor: pointer;
@@ -387,6 +423,11 @@ button {
     padding-top: 75px;
   }
 }
+@media (min-width: 1140px) {
+  .about {
+    padding-top: 150px;
+  }
+}
 .wrapper-text {
   width: auto;
   margin-right: 30px;
@@ -411,18 +452,19 @@ button {
   font-size: 18px;
   color: #393f47;
   font-weight: 500;
-  line-height: 1.667;
+  line-height: 1.57;
   text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
-  margin-bottom: 40px;
+  margin-bottom: 31px;
 }
 @media (min-width: 1140px) {
   .text {
     max-width: 488px;
+    font-size: 24px;
   }
 }
 .wrapper-img-bg {
   transform: scale(1.8);
-  margin-top: -40px;
+  margin-top: -130px;
   position: relative;
   margin-bottom: 90px;
   z-index: 1;
@@ -437,6 +479,11 @@ button {
     background-color: black;
     height: 20px;
     top: 0;
+  }
+}
+@media (min-width: 1140px) {
+  .wrapper-img-bg {
+    margin-bottom: -13px;
   }
 }
 .img-wrapper {
@@ -467,7 +514,7 @@ button {
   }
 }
 .wrapper-title-one-header {
-  margin-bottom: 35px;
+  margin-bottom: 14px;
 }
 .function-text-wrapper {
   width: auto;
@@ -479,8 +526,6 @@ button {
 @media (min-width: 708px) {
   .function-text-wrapper {
     margin-bottom: 0;
-    margin-right: 30px;
-    width: 50%;
   }
 }
 .contacts {
@@ -493,7 +538,8 @@ button {
 }
 @media (min-width: 1140px) {
   .contacts {
-    width: 30%;
+    width: 32%;
+    padding-left: 4px;
   }
 }
 .function-wrapper {
@@ -512,12 +558,18 @@ button {
   }
 }
 .mail {
-  font-size: 20px;
+  font-size: 24px;
   color: #000000;
   text-decoration: underline;
   line-height: 1.2;
   text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
   font-weight: 400;
+}
+.mail:focus {
+  color: #59b2ea;
+}
+.mail:active {
+  color: #ee8c88;
 }
 .button-contacts {
   position: relative;
@@ -533,7 +585,7 @@ button {
   font-weight: 700;
   line-height: 54px;
   text-align: center;
-  width: 182px;
+  width: 189px;
   height: 64px;
 }
 @media (min-width: 1140px) {
@@ -541,13 +593,23 @@ button {
     display: inline-block;
   }
 }
+.button-contacts:hover {
+  color: #797979;
+  border-color: #797979;
+}
+.button-contacts:active {
+  color: #181818;
+  border-color: #181818;
+}
 @media (min-width: 1140px) {
   .list-function {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
+    margin-left: 28px;
   }
 }
 @media (min-width: 1140px) {
   .list-function-item {
+    margin-bottom: 11px;
     font-size: 24px;
     position: relative;
     font-weight: 400;
@@ -559,20 +621,19 @@ button {
     content: "";
     position: absolute;
     top: 15px;
-    left: -25px;
-    height: 1px;
-    width: 10px;
+    left: -29px;
+    height: 2px;
+    width: 21px;
     background-color: black;
   }
 }
 .portfolio {
-  padding-top: 110px;
-  padding-bottom: 120px;
+  padding-top: 245px;
+  padding-bottom: 4px;
   background-color: #f4f8f9;
 }
 .title-one-level-portfolio {
   font-size: 64px;
-  font-family: "Mplus 1p";
   color: #000000;
   line-height: 1.2;
   font-weight: 800;
@@ -610,18 +671,18 @@ button {
   }
 }
 .list-portfolio {
-  margin-top: 65px;
+  margin-top: 59px;
   margin-bottom: 50px;
 }
 .list-portfolio-item {
   font-size: 28px;
-  font-family: "Mplus 1p ";
   font-weight: 800;
   color: #8fa5ae;
   background-color: #f4f8f9;
   line-height: 1.2;
   border: none;
-  margin-right: 80px;
+  padding: 0;
+  margin-right: 58px;
 }
 .list-portfolio-item:last-child {
   margin-right: 0;
@@ -649,11 +710,10 @@ button {
   display: block;
   position: relative;
   font-size: 32px;
-  font-family: "Mplus 1p";
   color: #000000;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   transition: 0.5s;
 }
 .title-block:hover {
@@ -662,7 +722,6 @@ button {
   color: #ed574f;
 }
 .img-block {
-  margin-bottom: 30px;
   display: block;
   position: relative;
   overflow: hidden;
@@ -724,8 +783,8 @@ button {
   border-color: #d4423b;
 }
 .work {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 138px;
+  padding-bottom: 25px;
 }
 .title-work {
   font-size: 64px;
@@ -733,7 +792,7 @@ button {
   color: #000000;
   line-height: 1.2;
   text-align: center;
-  margin-bottom: 150px;
+  margin-bottom: 174px;
 }
 .wrapper-block-work {
   display: flex;
@@ -745,7 +804,7 @@ button {
   width: 50%;
   padding-bottom: 30px;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 38px;
   min-height: 200px;
 }
 .block-work:first-child::after {
@@ -825,7 +884,6 @@ button {
 }
 .title-three-work {
   font-size: 26px;
-  font-family: "Mplus 1p";
   font-weight: 800;
   color: #000000;
   line-height: 1.2;
@@ -838,7 +896,7 @@ button {
   color: #000000;
   line-height: 1.2;
   text-align: right;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 }
 .time-work {
   font-size: 18px;
@@ -855,7 +913,7 @@ button {
   position: relative;
 }
 .contact {
-  padding-top: 150px;
+  padding-top: 135px;
   padding-bottom: 150px;
   background-color: #f4f8f9;
   position: relative;
@@ -864,6 +922,7 @@ button {
   position: absolute;
   top: 0;
   left: -380px;
+  z-index: 1;
 }
 .title-contact {
   font-size: 64px;
@@ -881,23 +940,27 @@ button {
 }
 .wrapper-contact-text {
   max-width: 555px;
+  z-index: 20;
+  margin-top: -24px;
 }
 .text-contact {
   font-size: 20px;
-  font-family: "Mplus 1p";
   font-weight: 400;
   color: #000000;
   line-height: 1.6;
   text-align: left;
-  margin-bottom: 50px;
+  margin-bottom: 37px;
 }
 .wrapper-contact-list {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 .wrapper-contact-list-item {
   display: flex;
   flex-direction: row;
   margin-bottom: 35px;
+}
+.wrapper-contact-list-item:last-child {
+  margin-bottom: 0px;
 }
 .contact-list-col-one {
   display: block;
@@ -918,14 +981,8 @@ button {
   box-shadow: 0px 28px 100px 0px #c2dbeb;
   max-width: 555px;
   height: 545px;
-  padding: 60px 60px 40px 60px;
-}
-.form-text {
-  font-size: 16px;
-  color: #ed9626;
-  font-weight: bold;
-  line-height: 1.2;
-  text-align: left;
+  padding: 40px 60px 40px 80px;
+  position: relative;
 }
 .form-input {
   width: 390px;
@@ -934,6 +991,7 @@ button {
   border-bottom: solid;
   border-width: 1px;
   border-color: #eaeaea;
+  z-index: 20;
   font-size: 20px;
   font-weight: 700;
   color: black;
@@ -944,6 +1002,24 @@ button {
 .form-input::placeholder {
   color: #bcbcbc;
   transition: 0.5s;
+}
+.form-input:first-of-type {
+  padding-top: 40px;
+  height: 80px;
+}
+.form-input:focus .placeholder-email {
+  transition: 0.5s;
+  transform: translateY(-30px);
+}
+.placeholder-email {
+  position: absolute;
+  font-size: 16px;
+  transform: translateY(50px);
+  color: #ed9626;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  z-index: 1;
 }
 .form-textarea {
   width: 390px;
