@@ -565,10 +565,10 @@ button {
   text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
   font-weight: 400;
 }
-.mail:focus {
+.mail a:hover {
   color: #59b2ea;
 }
-.mail:active {
+.mail a:active {
   color: #ee8c88;
 }
 .button-contacts {
@@ -687,6 +687,9 @@ button {
 .list-portfolio-item:last-child {
   margin-right: 0;
 }
+.list-portfolio-item:hover {
+  color: #ed574f;
+}
 .control-active {
   color: #000000;
 }
@@ -714,11 +717,9 @@ button {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 12px;
-  transition: 0.5s;
 }
 .title-block:hover {
-  text-decoration: underline;
-  transition: 0.5s;
+  border-bottom: 2px solid #ed574f;
   color: #ed574f;
 }
 .img-block {
@@ -798,6 +799,20 @@ button {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+.line-horizontal-work {
+  position: relative;
+  z-index: 2;
+}
+.line-horizontal-work::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: -5px;
+  right: -5px;
+  height: 7px;
+  background-color: #fbdc4d;
+  z-index: -1;
 }
 .block-work {
   display: flex;
@@ -1071,7 +1086,6 @@ button {
 }
 .title-one-level-work {
   font-size: 64px;
-  font-family: "Mplus 1p";
   color: #000000;
   line-height: 1.2;
   font-weight: 800;
@@ -1104,9 +1118,16 @@ button {
 .wrapper-icon-footer-work {
   text-align: center;
 }
+.footer-work-link:hover {
+  color: #59b2ea;
+}
+.footer-work-link:active {
+  color: #ee8c88;
+}
 .img-wrapper-footer-icon {
   position: absolute;
   bottom: 0;
   width: 1140px;
+  z-index: -1;
 }
 /*# sourceMappingURL=main.css.map */
