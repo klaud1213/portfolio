@@ -92,7 +92,7 @@
                 </li>
                 <li class="list-function-item">С Bootstrap и без него.</li>
               </ul>
-              <button class="button-standart">Смотреть работы</button>
+              <a class="button-standart" href="#portfolio">Смотреть работы</a>
             </div>
             <div class="contacts">
               <h2 class="title-two-level">На связи:</h2>
@@ -108,7 +108,11 @@
                 </a>
               </div>
               <div class="mail">
-                <a href="" >watch_dogs1213@mail.ru</a>
+                <a href="">
+                  <span class="line-horizontal-mail">
+                    watch_dogs1213@mail.ru
+                  </span>
+                </a>
               </div>
             </div>
           </div>
@@ -116,7 +120,7 @@
       </div>
     </header>
     <main>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container">
           <h1 class="title-one-level-portfolio">
             <span class="line-horizontal-portfolio">Портфолио</span>
@@ -181,6 +185,7 @@
               <p class="text-block">Верстка многостраничного сайта.</p>
             </div>
           </div>
+          <a href="" class="link-all-work">Смотреть все работы</a>
         </div>
       </section>
       <section class="work">
@@ -293,20 +298,20 @@
                 <li class="wrapper-contact-list-item">
                   <span class="contact-list-col-one">Email</span>
                   <span class="contact-list-col-two">
-                    <a>watch_dogs1213@mail.ru</a>
+                    <a href="" class="link-contact">watch_dogs1213@mail.ru</a>
                   </span>
                 </li>
 
                 <li class="wrapper-contact-list-item">
                   <span class="contact-list-col-one">Телефон</span>
                   <span class="contact-list-col-two">
-                    <a>+7 (980) 123-45-67</a>
+                    <a href="" class="link-contact">+7 (980) 123-45-67</a>
                   </span>
                 </li>
                 <li class="wrapper-contact-list-item">
                   <span class="contact-list-col-one">Адрес</span>
                   <span class="contact-list-col-two">
-                    <a>Россия, Москва</a>
+                    Россия, Москва
                   </span>
                 </li>
               </ul>
@@ -323,15 +328,45 @@
                 </a>
               </div>
             </div>
-            <form class="form-contact">
-              <label class="placeholder-email">Ваш Email</label>
-              <input type="text" class="form-input" placeholder="Ваш Email" />
-              <input type="text" class="form-input" placeholder="Тема письма" />
-              <textarea
-                class="form-textarea"
-                placeholder="Сообщение"
-              ></textarea>
-              <button class="form-button">Отправить</button>
+            <form class="form-contact" id="contact-form">
+              <input
+                type="hidden"
+                name="project_name"
+                value="my_portfolio.ru"
+              />
+              <input
+                type="hidden"
+                name="admin_email"
+                value="watch_dogs1213@mail.ru"
+              />
+              <input
+                type="hidden"
+                name="email_from"
+                value="info@my_portfolio.ru"
+              />
+              <div class="form-contact-item">
+                <input type="text" class="form-input" name="email" />
+                <span class="fake-placeholder">Ваш Email</span>
+              </div>
+              <div class="form-contact-item">
+                <input type="text" class="form-input" name="theme" />
+                <span class="fake-placeholder">Тема письма</span>
+              </div>
+              <div class="form-contact-item">
+                <textarea
+                  class="form-input"
+                  rows="5"
+                  name="message"
+                  id="textarea"
+                ></textarea>
+                <span class="fake-placeholder">Сообщение</span>
+              </div>
+
+              <button class="form-button" name="form-button" value="Отправить">
+                Отправить
+              </button>
+
+              <div id="answer"></div>
             </form>
           </div>
         </div>
@@ -343,7 +378,7 @@
         <p class="paragraf-text">
           Веб-разработик из Москвы, занимаюсь версткой и созданием сайтов.
           <br />Этот сайт сделал в рамках прохождения обучения по верстке на
-          курсах от WebCademy.ru
+          курсах от <a href="" class="link-footer">WebCademy.ru</a>
         </p>
       </div>
     </footer>
@@ -354,5 +389,6 @@
     <script src="./libs/jquery/jquery-3.5.0.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./libs/Mixitup/mixitup.min.js"></script>
+    <script src="./libs/jquery.validate/jquery.validate.js"></script>
   </body>
 </html>

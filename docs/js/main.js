@@ -36,5 +36,65 @@ $(document).ready(function () {
       }
     });
   }
-  
+
+  const forminputs = document.querySelectorAll(".form-input");
+  for (let item of forminputs) {
+    const inputplaceholder = item.nextElementSibling;
+    item.addEventListener("click", function () {
+      inputplaceholder.classList.add("active-form");
+    });
+    item.addEventListener("blur", function () {
+      if (this.value == "") {
+        inputplaceholder.classList.remove("active-form");
+      }
+    });
+  }
+  $("#contact-form").validate({
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      },
+      theme: {
+        required: true,
+      },
+      message: {
+        required: true,
+      },
+    },
+    messages: {
+      email: {
+        required: "Введите Ваш email",
+        email: "некорректно введен email",
+      },
+      theme: {
+        required: "Введите тему сообщения",
+      },
+      message: {
+        required: "Введите текс сообщения",
+      },
+    },
+    submitHandler: function (form) {
+      ajaxFormSubmit();
+    },
+  });
+  function ajaxFormSubmit() {
+    let string = $("#contact-form").serialize(); // Соханяем данные введенные в форму в строку.
+
+    //Формируем ajax запрос
+    $.ajax({
+      type: "POST", // Тип запроса - POST
+      url: "php/mail.php", // Куда отправляем запрос
+      data: string, // Какие даные отправляем, в данном случае отправляем переменную string
+
+      // Функция если все прошло успешно
+      success: function (html) {
+        $("#contact-form").slideUp(800);
+        $("#answer").html(html);
+      },
+    });
+
+    // Чтобы по Submit больше ничего не выполнялось - делаем возврат false чтобы прервать цепчку срабатывания остальных функций
+    return false;
+  }
 });

@@ -69,24 +69,50 @@
   display: block;
   font-size: 20px;
   font-weight: 500;
-
+  color: #96969d;
   line-height: 1.2;
 }
 .form-contact {
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 28px 100px 0px rgba(194, 219, 235, 1);
   max-width: 555px;
-  height: 545px;
+
   padding: 40px 60px 40px 80px;
   position: relative;
 }
-
-.form-input {
-  width: 390px;
+.form-contact-item {
+  position: relative;
   margin-bottom: 50px;
+  &:last-child {
+    margin-bottom: 30px;
+  }
+}
+.fake-placeholder {
+  z-index: 1;
+  font-size: 20px;
+  font-weight: 700;
+  color: #bcbcbc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.fake-placeholder.active-form {
+  position: absolute;
+  font-size: 16px;
+  color: rgb(237, 150, 38);
+  font-weight: 700;
+  top: -20px;
+  transition: 0.4s;
+}
+.form-input {
+  z-index: 5;
+  width: 390px;
+
   border: none;
   border-bottom: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-color: rgb(234, 234, 234);
   z-index: 20;
   font-size: 20px;
@@ -95,37 +121,18 @@
   height: 40px;
   line-height: 1.2;
   text-align: left;
-  &::placeholder {
-    color: rgb(188, 188, 188);
-    transition: 0.5s;
-  }
-  &:first-of-type {
-    padding-top: 40px;
-    height: 80px;
-  }
-  &:focus .placeholder-email {
-    transition: 0.5s;
-    transform: translateY(-30px);
+  &:focus {
+    border-color: #ea736d;
   }
 }
-
-.placeholder-email {
-  position: absolute;
-  font-size: 16px;
-  transform: translateY(50px);
-  color: rgb(237, 150, 38);
-  font-weight: bold;
-  line-height: 1.2;
-  text-align: left;
-  z-index: 1;
-}
-.form-textarea {
+#textarea {
+  z-index: 5;
   width: 390px;
   height: 120px;
-  margin-bottom: 40px;
+
   border: none;
   border-bottom: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-color: rgb(234, 234, 234);
 
   font-size: 20px;
@@ -135,10 +142,9 @@
   line-height: 1.2;
   text-align: left;
   resize: none;
-
-  &::placeholder {
-    color: rgb(188, 188, 188);
-    transition: 0.5s;
+  &:focus {
+    outline: none;
+    border-color: #ea736d;
   }
 }
 .form-button {
@@ -151,4 +157,23 @@
   color: rgb(0, 0, 0);
   font-weight: bold;
   line-height: 1.2;
+}
+.link-contact {
+  &:visited {
+    color: #96969d;
+  }
+  &:link {
+    color: #96969d;
+  }
+  &:hover {
+    color: #039be5;
+  }
+  &:active {
+    color: #eb736e;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 14px;
 }

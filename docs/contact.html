@@ -56,14 +56,14 @@
               <li class="wrapper-contact-list-item">
                 <span class="contact-list-col-one">Email</span>
                 <span class="contact-list-col-two">
-                  <a href="#">watch_dogs1213@mail.ru</a>
+                  <a href="" class="link-contact">watch_dogs1213@mail.ru</a>
                 </span>
               </li>
 
               <li class="wrapper-contact-list-item">
                 <span class="contact-list-col-one">Телефон</span>
                 <span class="contact-list-col-two">
-                  <a href="#">+7 (980) 123-45-67</a>
+                  <a href="" class="link-contact">+7 (980) 123-45-67</a>
                 </span>
               </li>
               <li class="wrapper-contact-list-item">
@@ -86,12 +86,41 @@
               </a>
             </div>
           </div>
-          <form class="form-contact">
-            <span class="placeholder-email">Ваш Email</span>
-            <input type="text" class="form-input" placeholder="Ваш Email" />
-            <input type="text" class="form-input" placeholder="Тема письма" />
-            <textarea class="form-textarea" placeholder="Сообщение"></textarea>
-            <button class="form-button">Отправить</button>
+          <form class="form-contact" id="contact-form">
+            <input type="hidden" name="project_name" value="my_portfolio.ru" />
+            <input
+              type="hidden"
+              name="admin_email"
+              value="watch_dogs1213@mail.ru"
+            />
+            <input
+              type="hidden"
+              name="email_from"
+              value="info@my_portfolio.ru"
+            />
+            <div class="form-contact-item">
+              <input type="text" class="form-input" name="email" />
+              <span class="fake-placeholder">Ваш Email</span>
+            </div>
+            <div class="form-contact-item">
+              <input type="text" class="form-input" name="theme" />
+              <span class="fake-placeholder">Тема письма</span>
+            </div>
+            <div class="form-contact-item">
+              <textarea
+                class="form-input"
+                rows="5"
+                name="message"
+                id="textarea"
+              ></textarea>
+              <span class="fake-placeholder">Сообщение</span>
+            </div>
+
+            <button class="form-button" name="form-button" value="Отправить">
+              Отправить
+            </button>
+
+            <div id="answer"></div>
           </form>
         </div>
       </div>
@@ -102,9 +131,15 @@
         <p class="paragraf-text">
           Веб-разработик из Москвы, занимаюсь версткой и созданием сайтов.
           <br />Этот сайт сделал в рамках прохождения обучения по верстке на
-          курсах от WebCademy.ru
+          курсах от <a href="" class="link-footer">WebCademy.ru</a>
         </p>
       </div>
     </footer>
+    <script
+      src="https://kit.fontawesome.com/bef3e7a310.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./libs/jquery/jquery-3.5.0.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

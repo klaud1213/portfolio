@@ -21,6 +21,8 @@
   z-index: 2;
 
   &::after {
+    transition: 0.5s;
+
     content: "";
     position: absolute;
     bottom: 3px;
@@ -32,6 +34,7 @@
   }
 }
 .block-work {
+  cursor: pointer;
   display: flex;
   width: 50%;
 
@@ -102,6 +105,9 @@
   &:last-child::before {
     content: "";
     background-color: white;
+  }
+  &:hover .line-horizontal-work::after {
+    background-color: #ea736d;
   }
 }
 

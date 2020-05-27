@@ -2,15 +2,25 @@
   padding-top: 245px;
   padding-bottom: 4px;
   background-color: #f4f8f9;
+  @media (min-width: 708px) {
+  }
+  @media (min-width: 1140px) {
+  }
 }
 .title-one-level-portfolio {
-  font-size: 64px;
+  font-size: 42px;
 
   color: rgb(0, 0, 0);
   line-height: 1.2;
   font-weight: 800;
-
+  margin-bottom: 40px;
   z-index: 38;
+  @media (min-width: 708px) {
+  }
+  @media (min-width: 1140px) {
+    margin-bottom: 0px;
+    font-size: 64px;
+  }
 }
 
 .line-horizontal-portfolio {
@@ -42,9 +52,15 @@
   }
 }
 .list-portfolio {
-  margin-top: 59px;
+  display: none;
+  @media (min-width: 708px) {
+  }
+  @media (min-width: 1140px) {
+    display: block;
+    margin-top: 59px;
 
-  margin-bottom: 50px;
+    margin-bottom: 50px;
+  }
 }
 .list-portfolio-item {
   font-size: 28px;
@@ -69,29 +85,65 @@
 }
 .row-portfolio {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  margin-bottom: 45px;
+  @media (min-width: 708px) {
+  }
+  @media (min-width: 1140px) {
+    margin-bottom: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 .block-portfolio {
-  max-width: 555px;
-  margin-bottom: 60px;
+  max-width: 290px;
+  margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  @media (min-width: 708px) {
+  }
+  @media (min-width: 1140px) {
+    max-width: 555px;
+    margin-bottom: 60px;
+    &:last-child {
+      margin-bottom: 60px;
+    }
+  }
 }
 .block-portfolio-big {
-  width: 555px;
+  @media (min-width: 708px) {
+    width: 290px;
+  }
+  @media (min-width: 1140px) {
+    width: 555px;
+  }
 }
 .block-portfolio-small {
-  width: 360px;
+  @media (min-width: 708px) {
+    width: 290px;
+  }
+  @media (min-width: 1140px) {
+    width: 360px;
+  }
 }
 .title-block {
   display: block;
   position: relative;
-  font-size: 32px;
-
+  font-size: 22px;
   color: rgb(0, 0, 0);
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+
+  @media (min-width: 708px) {
+  }
+  @media (min-width: 1140px) {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
 
   &:hover {
     border-bottom: 2px solid #ed574f;
@@ -124,10 +176,16 @@
   }
 }
 .text-block {
-  font-size: 22px;
+  font-size: 16px;
+
   font-weight: 300;
   color: rgb(0, 0, 0);
   line-height: 1.2;
+  @media (min-width: 708px) {
+  }
+  @media (min-width: 1140px) {
+    font-size: 22px;
+  }
 }
 .more-btn {
   position: absolute;
@@ -159,5 +217,21 @@
     transition: 0.5s;
     color: white;
     border-color: #d4423b;
+  }
+}
+.link-all-work {
+  font-size: 20px;
+
+  color: rgb(3, 155, 229);
+  border-bottom: 1px solid rgb(3, 155, 229);
+  line-height: 1.2;
+  text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
+  &:visited {
+    color: rgb(3, 155, 229);
+  }
+  @media (min-width: 708px) {
+  }
+  @media (min-width: 1140px) {
+    display: none;
   }
 }

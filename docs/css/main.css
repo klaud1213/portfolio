@@ -9,6 +9,10 @@ html {
 }
 html,
 body {
+  background-image: url(../img/header/headerBg.jpg);
+  background-size: contain;
+  background-position: 0 0;
+  background-repeat: repeat;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -209,10 +213,6 @@ button {
 .header {
   padding-top: 35px;
   padding-bottom: 100px;
-  background-image: url(../img/header/headerBg.jpg);
-  background-size: contain;
-  background-position: 0 0;
-  background-repeat: repeat;
   max-width: 1600px;
   margin: 0 auto;
   overflow: hidden;
@@ -487,9 +487,24 @@ button {
   }
 }
 .img-wrapper {
+  position: relative;
   width: auto;
   max-height: 290px;
   margin-bottom: 55px;
+  z-index: 2;
+}
+.img-wrapper::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  z-index: 1;
+  background-image: -moz-linear-gradient(90deg, #f4f8f9 0%, rgba(244, 248, 249, 0) 100%);
+  background-image: -webkit-linear-gradient(90deg, #f4f8f9 0%, rgba(244, 248, 249, 0) 100%);
+  background-image: -ms-linear-gradient(90deg, #f4f8f9 0%, rgba(244, 248, 249, 0) 100%);
+  opacity: 0.502;
 }
 @media (min-width: 708px) {
   .img-wrapper {
@@ -507,6 +522,7 @@ button {
 }
 .img-wrapper img {
   margin: 0 auto;
+  z-index: 5;
 }
 @media (min-width: 1140px) {
   .img-wrapper img {
@@ -558,9 +574,10 @@ button {
   }
 }
 .mail {
+  position: relative;
   font-size: 24px;
+  text-decoration: none;
   color: #000000;
-  text-decoration: underline;
   line-height: 1.2;
   text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
   font-weight: 400;
@@ -570,6 +587,25 @@ button {
 }
 .mail a:active {
   color: #ee8c88;
+}
+.mail a:hover .line-horizontal-mail::after {
+  background-color: #59b2ea;
+}
+.mail a:active .line-horizontal-mail::after {
+  background-color: #ee8c88;
+}
+.line-horizontal-mail {
+  position: relative;
+}
+.line-horizontal-mail::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: black;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  width: 300px;
 }
 .button-contacts {
   position: relative;
@@ -633,11 +669,18 @@ button {
   background-color: #f4f8f9;
 }
 .title-one-level-portfolio {
-  font-size: 64px;
+  font-size: 42px;
   color: #000000;
   line-height: 1.2;
   font-weight: 800;
+  margin-bottom: 40px;
   z-index: 38;
+}
+@media (min-width: 1140px) {
+  .title-one-level-portfolio {
+    margin-bottom: 0px;
+    font-size: 64px;
+  }
 }
 .line-horizontal-portfolio {
   position: relative;
@@ -671,8 +714,14 @@ button {
   }
 }
 .list-portfolio {
-  margin-top: 59px;
-  margin-bottom: 50px;
+  display: none;
+}
+@media (min-width: 1140px) {
+  .list-portfolio {
+    display: block;
+    margin-top: 59px;
+    margin-bottom: 50px;
+  }
 }
 .list-portfolio-item {
   font-size: 28px;
@@ -695,28 +744,68 @@ button {
 }
 .row-portfolio {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  margin-bottom: 45px;
+}
+@media (min-width: 1140px) {
+  .row-portfolio {
+    margin-bottom: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 .block-portfolio {
-  max-width: 555px;
-  margin-bottom: 60px;
+  max-width: 290px;
+  margin-bottom: 40px;
 }
-.block-portfolio-big {
-  width: 555px;
+.block-portfolio:last-child {
+  margin-bottom: 0px;
 }
-.block-portfolio-small {
-  width: 360px;
+@media (min-width: 1140px) {
+  .block-portfolio {
+    max-width: 555px;
+    margin-bottom: 60px;
+  }
+  .block-portfolio:last-child {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 708px) {
+  .block-portfolio-big {
+    width: 290px;
+  }
+}
+@media (min-width: 1140px) {
+  .block-portfolio-big {
+    width: 555px;
+  }
+}
+@media (min-width: 708px) {
+  .block-portfolio-small {
+    width: 290px;
+  }
+}
+@media (min-width: 1140px) {
+  .block-portfolio-small {
+    width: 360px;
+  }
 }
 .title-block {
   display: block;
   position: relative;
-  font-size: 32px;
+  font-size: 22px;
   color: #000000;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+}
+@media (min-width: 1140px) {
+  .title-block {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
 }
 .title-block:hover {
   border-bottom: 2px solid #ed574f;
@@ -746,10 +835,15 @@ button {
   opacity: 1;
 }
 .text-block {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 300;
   color: #000000;
   line-height: 1.2;
+}
+@media (min-width: 1140px) {
+  .text-block {
+    font-size: 22px;
+  }
 }
 .more-btn {
   position: absolute;
@@ -783,6 +877,21 @@ button {
   color: white;
   border-color: #d4423b;
 }
+.link-all-work {
+  font-size: 20px;
+  color: #039be5;
+  border-bottom: 1px solid #039be5;
+  line-height: 1.2;
+  text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
+}
+.link-all-work:visited {
+  color: #039be5;
+}
+@media (min-width: 1140px) {
+  .link-all-work {
+    display: none;
+  }
+}
 .work {
   padding-top: 138px;
   padding-bottom: 25px;
@@ -805,6 +914,7 @@ button {
   z-index: 2;
 }
 .line-horizontal-work::after {
+  transition: 0.5s;
   content: "";
   position: absolute;
   bottom: 3px;
@@ -815,6 +925,7 @@ button {
   z-index: -1;
 }
 .block-work {
+  cursor: pointer;
   display: flex;
   width: 50%;
   padding-bottom: 30px;
@@ -882,6 +993,9 @@ button {
 .block-work:last-child::before {
   content: "";
   background-color: white;
+}
+.block-work:hover .line-horizontal-work::after {
+  background-color: #ea736d;
 }
 .icon {
   position: relative;
@@ -989,22 +1103,48 @@ button {
   display: block;
   font-size: 20px;
   font-weight: 500;
+  color: #96969d;
   line-height: 1.2;
 }
 .form-contact {
   background-color: #ffffff;
   box-shadow: 0px 28px 100px 0px #c2dbeb;
   max-width: 555px;
-  height: 545px;
   padding: 40px 60px 40px 80px;
   position: relative;
 }
-.form-input {
-  width: 390px;
+.form-contact-item {
+  position: relative;
   margin-bottom: 50px;
+}
+.form-contact-item:last-child {
+  margin-bottom: 30px;
+}
+.fake-placeholder {
+  z-index: 1;
+  font-size: 20px;
+  font-weight: 700;
+  color: #bcbcbc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.fake-placeholder.active-form {
+  position: absolute;
+  font-size: 16px;
+  color: #ed9626;
+  font-weight: 700;
+  top: -20px;
+  transition: 0.4s;
+}
+.form-input {
+  z-index: 5;
+  width: 390px;
   border: none;
   border-bottom: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-color: #eaeaea;
   z-index: 20;
   font-size: 20px;
@@ -1014,35 +1154,16 @@ button {
   line-height: 1.2;
   text-align: left;
 }
-.form-input::placeholder {
-  color: #bcbcbc;
-  transition: 0.5s;
+.form-input:focus {
+  border-color: #ea736d;
 }
-.form-input:first-of-type {
-  padding-top: 40px;
-  height: 80px;
-}
-.form-input:focus .placeholder-email {
-  transition: 0.5s;
-  transform: translateY(-30px);
-}
-.placeholder-email {
-  position: absolute;
-  font-size: 16px;
-  transform: translateY(50px);
-  color: #ed9626;
-  font-weight: bold;
-  line-height: 1.2;
-  text-align: left;
-  z-index: 1;
-}
-.form-textarea {
+#textarea {
+  z-index: 5;
   width: 390px;
   height: 120px;
-  margin-bottom: 40px;
   border: none;
   border-bottom: solid;
-  border-width: 1px;
+  border-width: 2px;
   border-color: #eaeaea;
   font-size: 20px;
   font-weight: 700;
@@ -1051,9 +1172,9 @@ button {
   text-align: left;
   resize: none;
 }
-.form-textarea::placeholder {
-  color: #bcbcbc;
-  transition: 0.5s;
+#textarea:focus {
+  outline: none;
+  border-color: #ea736d;
 }
 .form-button {
   border-radius: 30px;
@@ -1065,6 +1186,22 @@ button {
   color: #000000;
   font-weight: bold;
   line-height: 1.2;
+}
+.link-contact:visited {
+  color: #96969d;
+}
+.link-contact:link {
+  color: #96969d;
+}
+.link-contact:hover {
+  color: #039be5;
+}
+.link-contact:active {
+  color: #eb736e;
+}
+.error {
+  color: red;
+  font-size: 14px;
 }
 .footer {
   padding-top: 30px;
@@ -1083,6 +1220,18 @@ button {
   font-weight: 400;
   color: #b0b0b0;
   line-height: 1.6;
+}
+.link-footer:visited {
+  color: #b0b0b0;
+}
+.link-footer:link {
+  color: #b0b0b0;
+}
+.link-footer:hover {
+  color: #ffffff;
+}
+.link-footer:active {
+  color: #ffffff;
 }
 .title-one-level-work {
   font-size: 64px;
