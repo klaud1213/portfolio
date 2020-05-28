@@ -212,7 +212,7 @@ button {
 }
 .header {
   padding-top: 35px;
-  padding-bottom: 100px;
+  padding-bottom: 238px;
   max-width: 1600px;
   margin: 0 auto;
   overflow: hidden;
@@ -284,7 +284,7 @@ button {
   left: 0;
   width: 0;
   height: 5px;
-  background-color: yellow;
+  background-color: #fbdc4d;
   transition: 0.5s;
   z-index: -1;
 }
@@ -664,7 +664,7 @@ button {
   }
 }
 .portfolio {
-  padding-top: 245px;
+  padding-top: 110px;
   padding-bottom: 4px;
   background-color: #f4f8f9;
 }
@@ -940,7 +940,8 @@ button {
   bottom: 250px;
   right: -2px;
   background-color: #e1eef4;
-  width: 5px;
+  width: 4px;
+  opacity: 0.7;
 }
 .block-work:nth-child(even) {
   padding-right: 68px;
@@ -956,7 +957,8 @@ button {
   right: auto;
   left: -2px;
   background-color: #e1eef4;
-  width: 5px;
+  width: 4px;
+  opacity: 0.7;
 }
 .block-work:nth-child(even) .icon {
   right: 37px;
@@ -985,7 +987,7 @@ button {
   left: auto;
   right: -2px;
   background-color: #e1eef4;
-  width: 5px;
+  width: 4px;
 }
 .block-work:nth-child(odd) .icon {
   left: 37px;
