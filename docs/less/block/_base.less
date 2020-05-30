@@ -48,7 +48,7 @@ a:visited {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(201, 61, 61, 0.4);
+  background-color: rgba(65, 62, 62, 0.4);
   z-index: 20;
   display: none;
 }
@@ -103,7 +103,7 @@ button {
   line-height: 1.2;
   font-weight: 800;
   @media (min-width: 708px) {
-    font-size: 42px;
+    font-size: 52px;
   }
   @media (min-width: 1140px) {
     font-size: 90px;
@@ -111,24 +111,28 @@ button {
 }
 .line-horizontal {
   position: relative;
-  font-size: 42px;
+
   z-index: 2;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: 20px;
+    bottom: 6px;
     left: -5px;
     right: -5px;
     height: 12px;
+
     background-color: #fbdc4d;
     z-index: -1;
   }
-  @media (min-width: 708px) {
-    font-size: 42px;
+  @media (min-width: 768px) {
   }
-  @media (min-width: 1140px) {
-    font-size: 90px;
+  @media (min-width: 1200px) {
+    &::after {
+      bottom: 20px;
+      left: -5px;
+      right: -5px;
+    }
   }
 }
 .title-two-level {
@@ -138,8 +142,11 @@ button {
   line-height: 1.2;
   text-shadow: 0px 3px 42.32px rgba(255, 255, 255, 0.004);
   font-weight: 800;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
+
   @media (min-width: 708px) {
+    margin-bottom: 26px;
+
     font-size: 32px;
   }
   @media (min-width: 1140px) {
@@ -155,10 +162,17 @@ button {
   height: 50px;
   border-radius: 50%;
   font-size: 35px;
-  margin-right: 31px;
-  margin-bottom: 34px;
+  margin-right: 30px;
+  margin-bottom: 14px;
+
   &:last-child {
     margin-right: 0;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 22px;
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 34px;
   }
 }
 
