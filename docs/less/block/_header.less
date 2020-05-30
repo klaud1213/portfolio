@@ -386,8 +386,15 @@
   }
 }
 .function {
-  padding-top: 97px;
-  margin-top: -200px;
+  @media (min-width: 768px) {
+    padding-top: 200px;
+    margin-top: -200px;
+  }
+  @media (min-width: 1200px) {
+    padding-top: 97px;
+
+    margin-top: -200px;
+  }
 }
 .function-text-wrapper {
   width: auto;
