@@ -284,6 +284,9 @@ button {
   transition: 0.5s;
   transform: translateX(0%);
 }
+.header-menu.active .header-menu-item {
+  color: white;
+}
 .header-menu-item {
   font-size: 20px;
   color: #000000;
@@ -359,7 +362,7 @@ button {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 15;
+  z-index: 80;
   margin-right: 17px;
 }
 @media (min-width: 768px) {
@@ -679,7 +682,7 @@ button {
   width: 220px;
 }
 @media (min-width: 1200px) {
-  .line-horizontal-mail {
+  .line-horizontal-mail::after {
     width: 300px;
   }
 }
