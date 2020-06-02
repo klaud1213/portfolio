@@ -121,9 +121,13 @@
   }
   @media (min-width: 768px) {
     width: 339px;
+    &:last-child {
+      margin-bottom: auto;
+    }
   }
   @media (min-width: 1200px) {
     width: 555px;
+
     margin-bottom: 60px;
     &:last-child {
       margin-bottom: 60px;
@@ -132,22 +136,50 @@
 }
 .block-portfolio-big {
   width: 290px;
+  height: 300px;
+
+  & img {
+    height: 200px;
+  }
 
   @media (min-width: 768px) {
     width: 339px;
+    height: 300px;
+
+    & img {
+      height: 200px;
+    }
   }
   @media (min-width: 1200px) {
     width: 555px;
+    height: 480px;
+
+    & img {
+      height: 375px;
+    }
   }
 }
 .block-portfolio-small {
   width: 290px;
+  & img {
+    height: 200px;
+  }
 
   @media (min-width: 768px) {
     width: 339px;
+    height: 300px;
+
+    & img {
+      height: 200px;
+    }
   }
   @media (min-width: 1200px) {
     width: 360px;
+    height: 380px;
+
+    & img {
+      height: 240px;
+    }
   }
 }
 .title-block {
@@ -169,8 +201,6 @@
   }
 
   &:hover {
-    border-bottom: 2px solid #ed574f;
-
     color: #ed574f;
   }
 }

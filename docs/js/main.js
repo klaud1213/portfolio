@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  const MobileMenuToggle = document.querySelector(".toggle-menu");
+  /*const MobileMenuToggle = document.querySelector(".toggle-menu");
   const MobMenu = document.querySelector(".header-menu");
   const MobOverlay = document.querySelector("#overlay");
   MobileMenuToggle.addEventListener("click", function () {
@@ -11,7 +11,7 @@ $(document).ready(function () {
     MobMenu.classList.remove("active");
     MobileMenuToggle.classList.remove("active");
     MobOverlay.classList.remove("active");
-  });
+  });*/
   let containerEl = document.querySelector("#portfolio-project");
   let mixer = mixitup(containerEl, {
     classNames: {

@@ -1,0 +1,110 @@
+.section-clients {
+  padding: 108px 0 95px;
+  background-image: url("../img/Client/BG.svg");
+  background-position: center 156px;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.sectiont-clients-title {
+  margin-bottom: 73px;
+  text-align: center;
+}
+.sectiont-clients-header {
+  margin-bottom: 83px;
+  text-align: center;
+}
+.testimonial-carausel {
+  width: 770px;
+  margin: 0 auto;
+  padding: 0 6px;
+}
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonial-text {
+  margin-bottom: 47px;
+  font-size: 18px;
+  font-family: "Montserrat";
+  color: rgb(128, 128, 128);
+  line-height: 2.222;
+  text-align: center;
+  font-weight: 500;
+  & p {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}
+.testimonial-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonial-user-photo {
+  margin-right: 40px;
+
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.testimonial-user-name {
+  font-size: 16px;
+  font-family: "Montserrat";
+  color: rgb(128, 128, 128);
+  line-height: 1.3;
+  text-align: left;
+}
+.clients-carousel.owl-carousel .owl-nav button.owl-prev {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  top: 15px;
+  left: -45px;
+  transform: translateX(-100%);
+  background-image: url("../img/Client/carousel/arrowleft.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  & span {
+    display: none;
+  }
+}
+.clients-carousel.owl-carousel .owl-nav button.owl-next {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  top: 15px;
+  right: -45px;
+
+  transform: translateX(100%);
+  background-image: url("../img/Client/carousel/arrowright.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  & span {
+    display: none;
+  }
+}

@@ -178,6 +178,10 @@ button {
     margin-bottom: 34px;
   }
 }
+.icon-contacts-item:hover {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
 .button-standart {
   position: relative;
   display: none;
@@ -679,11 +683,11 @@ button {
   bottom: 2px;
   left: 2px;
   right: 2px;
-  width: 220px;
+  width: 250px;
 }
 @media (min-width: 1200px) {
   .line-horizontal-mail::after {
-    width: 300px;
+    width: 333px;
   }
 }
 .button-contacts {
@@ -886,6 +890,9 @@ button {
   .block-portfolio {
     width: 339px;
   }
+  .block-portfolio:last-child {
+    margin-bottom: auto;
+  }
 }
 @media (min-width: 1200px) {
   .block-portfolio {
@@ -898,28 +905,51 @@ button {
 }
 .block-portfolio-big {
   width: 290px;
+  height: 300px;
+}
+.block-portfolio-big img {
+  height: 200px;
 }
 @media (min-width: 768px) {
   .block-portfolio-big {
     width: 339px;
+    height: 300px;
+  }
+  .block-portfolio-big img {
+    height: 200px;
   }
 }
 @media (min-width: 1200px) {
   .block-portfolio-big {
     width: 555px;
+    height: 480px;
+  }
+  .block-portfolio-big img {
+    height: 375px;
   }
 }
 .block-portfolio-small {
   width: 290px;
 }
+.block-portfolio-small img {
+  height: 200px;
+}
 @media (min-width: 768px) {
   .block-portfolio-small {
     width: 339px;
+    height: 300px;
+  }
+  .block-portfolio-small img {
+    height: 200px;
   }
 }
 @media (min-width: 1200px) {
   .block-portfolio-small {
     width: 360px;
+    height: 380px;
+  }
+  .block-portfolio-small img {
+    height: 240px;
   }
 }
 .title-block {
@@ -944,7 +974,6 @@ button {
   }
 }
 .title-block:hover {
-  border-bottom: 2px solid #ed574f;
   color: #ed574f;
 }
 .img-block {
@@ -1130,6 +1159,7 @@ button {
   }
   .line-horizontal-work::after {
     transition: 0.5s;
+    display: block;
     content: "";
     position: absolute;
     bottom: 3px;
