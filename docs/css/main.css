@@ -1142,7 +1142,6 @@ button {
 }
 .block-work {
   position: relative;
-  min-height: 200px;
   cursor: pointer;
   display: flex;
   margin-bottom: 67px;
@@ -1164,6 +1163,7 @@ button {
 }
 @media (min-width: 768px) {
   .block-work {
+    min-height: 200px;
     width: 50%;
   }
   .block-work:first-child::after {

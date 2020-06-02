@@ -25,7 +25,7 @@
           <a href="contact.html" class="header-menu-item">Контакты</a>
         </nav>
         <nav class="header-social-icons">
-          <a href="#" class="header-social-icons-item linkedin-in">
+          <a href="#" class="header-social-icons-item linkedin-in none" >
             <i class="fab fa-linkedin-in"></i>
           </a>
           <a href="#" class="header-social-icons-item github">
@@ -328,7 +328,12 @@
                 </a>
               </div>
             </div>
-            <form class="form-contact" id="contact-form">
+            <form
+              class="form-contact"
+              id="contact-form"
+              action="mail.php"
+              method="POST"
+            >
               <input
                 type="hidden"
                 name="project_name"
@@ -370,9 +375,8 @@
               >
                 Отправить
               </button>
-
-              <div id="answer"></div>
             </form>
+            <div id="answer"></div>
           </div>
         </div>
       </section>
